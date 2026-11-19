@@ -1,8 +1,8 @@
-const { expect } = require('chai');
-const { describe, it, beforeEach, afterEach } = require('mocha');
-const NumbersValidator = require('../../app/numbers_validator');
+const { expect } = require("chai");
+const { describe, it, beforeEach, afterEach } = require("mocha");
+const NumbersValidator = require("../../app/numbers_validator");
 
-describe('isgetEvenNumbersFromArray', () => {
+describe("isgetEvenNumbersFromArray", () => {
   let validator;
   beforeEach(() => {
     validator = new NumbersValidator();
@@ -12,21 +12,21 @@ describe('isgetEvenNumbersFromArray', () => {
     validator = null;
   });
 
-  describe('positive tests', () => {
-    it('should return an array of even numbers', () => {
+  describe("positive tests", () => {
+    it("should return an array of even numbers", () => {
       const validationResults = validator.getEvenNumbersFromArray([1, 2, 3, 4]);
       expect(validationResults).to.deep.equal([2, 4]);
     });
   });
 
-  describe('negative tests', () => {
+  describe("negative tests", () => {
     const invalidInputs = [
       123,
-      'string',
+      "string",
       null,
       undefined,
       { a: 1 },
-      [1, '2', 4],
+      [1, "2", 4],
     ];
 
     invalidInputs.forEach((invalidInput) => {
