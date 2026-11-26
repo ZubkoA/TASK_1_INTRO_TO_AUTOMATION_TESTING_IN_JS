@@ -2,7 +2,14 @@
   "env": {
     "node": true,
     "commonjs": true,
-    "es2021": true
+    "es2021": true,
+    "mocha": true
+  },
+  "globals": {
+    "browser": "readonly",
+    "$": "readonly",
+    "$$": "readonly",
+    "expect": "readonly"
   },
   "extends": "airbnb-base",
   "parserOptions": {
@@ -13,6 +20,8 @@
     "arrow-parens": "off",
     "prefer-arrow-callback": "off",
     "func-names": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "max-len": ["error", { "code": 120 }],
+    "no-console": "off"
   }
 }
