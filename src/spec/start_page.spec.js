@@ -4,6 +4,14 @@ describe('START page', () => {
   let page;
   beforeEach(async () => {
     page = await browser.url('/start');
+    await browser.waitUntil(
+      async () => !(await $('div.loader').isDisplayed()),
+      {
+        timeout: 15000,
+        interval: 200,
+        timeoutMsg: 'Page loader did not disappear in time',
+      },
+    );
   });
   it('should open epam web', async () => {
     const expectedTitle = 'Learn';
@@ -11,21 +19,36 @@ describe('START page', () => {
   });
 
   it('should open hamburger menu', async () => {
-    await $('#global_menu_toggle').click();
-
+    const menuBtn = await $('#global_menu_toggle');
     const iframeElement = await $('iframe.GlobalMenuFrame');
-    await iframeElement.waitForExist({ timeout: 15000 });
+
+    await browser.waitUntil(
+      async () => {
+        if (
+          !(await iframeElement.isExisting()) &&
+          (await menuBtn.isClickable())
+        ) {
+          await menuBtn.click();
+        }
+        return await iframeElement.isExisting();
+      },
+      {
+        timeout: 20000,
+        interval: 500,
+        timeoutMsg: 'Hamburger menu iframe did not appear in Firefox',
+      },
+    );
 
     const menuIframe = await page.frame({
       selector: 'iframe.GlobalMenuFrame',
     });
 
     const globalMenu = await menuIframe.$('#global-menu');
-    await expect(globalMenu).toBeDisplayed({ wait: 10000 });
+    await expect(globalMenu).toBeDisplayed({ wait: 15000 });
   });
 
   it('should navigate to Cataloge page', async () => {
-    const link = await $('a[href*="/catalog"]');
+    const link = await $('#EXPLORE_BUTTON');
     const expectedTitle = 'Catalog | Explore | Learn';
     await link.click();
     await expect(browser).toHaveTitle(expectedTitle);

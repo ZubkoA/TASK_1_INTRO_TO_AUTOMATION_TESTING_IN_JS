@@ -1,3 +1,4 @@
+const { existsSync, mkdirSync } = require('fs');
 exports.config = {
   //
   // ====================
@@ -41,7 +42,7 @@ exports.config = {
   // and 30 processes will get spawned. The property handles how many capabilities
   // from the same test should run tests.
   //
-  maxInstances: 1,
+  maxInstances: 2,
   //
   // If you have trouble getting all important capabilities together, check out the
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -50,6 +51,17 @@ exports.config = {
   capabilities: [
     {
       browserName: 'chrome',
+      'goog:chromeOptions': {},
+    },
+    {
+      browserName: 'firefox',
+      'moz:firefoxOptions': {
+        prefs: {
+          'privacy.trackingprotection.enabled': false,
+          'privacy.trackingprotection.pbmode.enabled': false,
+          'network.cookie.cookieBehavior': 0,
+        },
+      },
     },
   ],
 
@@ -100,7 +112,7 @@ exports.config = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  // services: [],
+  services: [],
   //
   // The DevTools service shows a live dashboard of your run and can record a
   // replayable trace of every test. Install @wdio/devtools-service, then add
@@ -189,8 +201,9 @@ exports.config = {
    * @param {Array.<String>} specs        List of spec file paths that are to be run
    * @param {object}         browser      instance of created browser/device session
    */
-  // before: function (capabilities, specs) {
-  // },
+  before: async function () {
+    await browser.setWindowSize(1920, 1080);
+  },
   /**
    * Runs before a WebdriverIO command gets executed.
    * @param {string} commandName hook command name
@@ -231,8 +244,21 @@ exports.config = {
    * @param {boolean} result.passed    true if test has passed, otherwise false
    * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
    */
-  // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-  // },
+  afterTest: async (test, context, result) => {
+    // take a screenshot anytime a test fails and throws an error
+    if (result.error) {
+      console.log(`Screenshot for the failed test ${test.title} is saved`);
+      const filename = test.title + '.png';
+      const dirPath = './artifacts/screenshots/';
+
+      if (!existsSync(dirPath)) {
+        mkdirSync(dirPath, {
+          recursive: true,
+        });
+      }
+      await browser.saveScreenshot(dirPath + filename);
+    }
+  },
 
   /**
    * Hook that gets executed after the suite has ended

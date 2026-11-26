@@ -6,9 +6,27 @@ describe('CAMPUS page', () => {
   });
   it('mouse move', async () => {
     const link = await $('div[data-name="Trainings"]');
+    await link.waitForDisplayed({ timeout: 10000 });
+
     const borderBeforeHover = await link.getCSSProperty('border-bottom-color');
     const bgBeforeHover = await link.getCSSProperty('background-color');
+
+    // Наводимо курсор (з невеликим зміщенням у центр елемента)
     await link.moveTo();
+
+    // Чекаємо, поки фон реально зміниться з прозорого на білий (#ffffff)
+    await browser.waitUntil(
+      async () => {
+        const bg = await link.getCSSProperty('background-color');
+        return bg.parsed.hex === '#ffffff';
+      },
+      {
+        timeout: 5000,
+        interval: 200,
+        timeoutMsg: 'Background did not become white (#ffffff) after moveTo',
+      },
+    );
+
     const borderAfterHover = await link.getCSSProperty('border-bottom-color');
     const bgAfterHover = await link.getCSSProperty('background-color');
 
