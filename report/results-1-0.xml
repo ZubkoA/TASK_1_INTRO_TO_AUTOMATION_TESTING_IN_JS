@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" errors="0" skipped="0">
+  <testsuite name="CAMPUS page" timestamp="2026-11-27T10:29:03" time="7.378" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="CAMPUS page"/>
+      <property name="capabilities" value="firefox.163_0a1.windows"/>
+      <property name="file" value="file:///D:/epam/Automating_testing_fundamental/Stage_2/task_1/src/spec/campus_page.spec.js"/>
+    </properties>
+    <testcase classname="firefox.163_0a1.windows.CAMPUS_page" name="mouse move" time="3.542">
+      <system-out><![CDATA[
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/element/d82621a7-5376-4647-b3e8-5960e06708bd/css/border-bottom-color - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/element/d82621a7-5376-4647-b3e8-5960e06708bd/css/background-color - {}
+RESULT: {}
+COMMAND: POST /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/actions - {"actions":[{"id":"pointer1","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"x":0,"y":0,"duration":100,"origin":{"element-6066-11e4-a52e-4f735466cecf":"d82621a7-5376-4647-b3e8-5960e06708bd"}}]}]}
+RESULT: {"actions":[{"id":"pointer1","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"x":0,"y":0,"duration":100,"origin":{"element-6066-11e4-a52e-4f735466cecf":"d82621a7-5376-4647-b3e8-5960e06708bd"}}]}]}
+COMMAND: DELETE /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/actions - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/element/d82621a7-5376-4647-b3e8-5960e06708bd/css/background-color - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/element/d82621a7-5376-4647-b3e8-5960e06708bd/css/border-bottom-color - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/element/d82621a7-5376-4647-b3e8-5960e06708bd/css/background-color - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.163_0a1.windows.CAMPUS_page" name="should navigate to Trainning skills JavaScript in FOOTER" time="3.832">
+      <system-out><![CDATA[
+COMMAND: POST /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/actions - {"actions":[{"id":"wheel1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"a656d889-49ce-4ba5-9ed3-cef81420fe26"}}]}]}
+RESULT: {"actions":[{"id":"wheel1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"a656d889-49ce-4ba5-9ed3-cef81420fe26"}}]}]}
+COMMAND: POST /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/element/a656d889-49ce-4ba5-9ed3-cef81420fe26/click - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/title - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/title - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/title - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/title - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/title - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/title - {}
+RESULT: {}
+COMMAND: GET /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20/title - {}
+RESULT: {}
+COMMAND: DELETE /session/80da4f05-60f5-4c1e-b330-c9b68d89ea20 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

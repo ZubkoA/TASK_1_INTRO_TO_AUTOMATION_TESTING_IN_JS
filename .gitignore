@@ -1,3 +1,7 @@
 node_modules
 coverage
 mochawesome-report
+artifacts/
+*.log
+.vscode/
+.DS_Store

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="START page" timestamp="2026-11-27T10:29:13" time="16.761" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="START page"/>
+      <property name="capabilities" value="chrome.148_0_7778_179.windows"/>
+      <property name="file" value="file:///D:/epam/Automating_testing_fundamental/Stage_2/task_1/src/spec/start_page.spec.js"/>
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.START_page" name="should open epam web" time="2.047">
+      <system-out><![CDATA[
+COMMAND: GET /session/62b560bef9bdccb93b14a0093ace7cd1/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_179.windows.START_page" name="should open hamburger menu" time="3.289">
+      <system-out><![CDATA[
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/element/f.FE3584E56BC9FC1DECF51F18A989B7F1.d.E016B23D5BD75FA602A64748D5A6CD94.e.12/click - {}
+RESULT: {}
+COMMAND: GET /session/62b560bef9bdccb93b14a0093ace7cd1/element/f.FE3584E56BC9FC1DECF51F18A989B7F1.d.E016B23D5BD75FA602A64748D5A6CD94.e.161/name - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_179.windows.START_page" name="should navigate to Cataloge page" time="3.292">
+      <system-out><![CDATA[
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/element/f.FE3584E56BC9FC1DECF51F18A989B7F1.d.3BE5499515D88BCE75D90493AD8D6F39.e.359/click - {}
+RESULT: {}
+COMMAND: GET /session/62b560bef9bdccb93b14a0093ace7cd1/title - {}
+RESULT: {}
+COMMAND: GET /session/62b560bef9bdccb93b14a0093ace7cd1/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_179.windows.START_page" name="should navigate to Campus page" time="8.128">
+      <system-out><![CDATA[
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/element/f.FE3584E56BC9FC1DECF51F18A989B7F1.d.6ACF92584C232E3FABB22E26E2EF1834.e.928/elements - {"using":"xpath","value":".//*[contains(text(), \"Campus\")]"}
+RESULT: {"using":"xpath","value":".//*[contains(text(), \"Campus\")]"}
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/actions - {"actions":[{"id":"wheel1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.FE3584E56BC9FC1DECF51F18A989B7F1.d.6ACF92584C232E3FABB22E26E2EF1834.e.930"}}]}]}
+RESULT: {"actions":[{"id":"wheel1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.FE3584E56BC9FC1DECF51F18A989B7F1.d.6ACF92584C232E3FABB22E26E2EF1834.e.930"}}]}]}
+COMMAND: DELETE /session/62b560bef9bdccb93b14a0093ace7cd1/actions - {}
+RESULT: {}
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/actions - {"actions":[{"id":"wheel2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":877,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.FE3584E56BC9FC1DECF51F18A989B7F1.d.6ACF92584C232E3FABB22E26E2EF1834.e.930"}}]}]}
+RESULT: {"actions":[{"id":"wheel2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":877,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.FE3584E56BC9FC1DECF51F18A989B7F1.d.6ACF92584C232E3FABB22E26E2EF1834.e.930"}}]}]}
+COMMAND: DELETE /session/62b560bef9bdccb93b14a0093ace7cd1/actions - {}
+RESULT: {}
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/element/f.FE3584E56BC9FC1DECF51F18A989B7F1.d.6ACF92584C232E3FABB22E26E2EF1834.e.930/click - {}
+RESULT: {}
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/element/f.FE3584E56BC9FC1DECF51F18A989B7F1.d.6ACF92584C232E3FABB22E26E2EF1834.e.930/click - {}
+RESULT: {}
+COMMAND: GET /session/62b560bef9bdccb93b14a0093ace7cd1/window/handles - {}
+RESULT: {}
+COMMAND: GET /session/62b560bef9bdccb93b14a0093ace7cd1/window/handles - {}
+RESULT: {}
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/window - {"handle":"7412D3C76C9E674DAD8B9FA5546E3186"}
+RESULT: {"handle":"7412D3C76C9E674DAD8B9FA5546E3186"}
+COMMAND: GET /session/62b560bef9bdccb93b14a0093ace7cd1/title - {}
+RESULT: {}
+COMMAND: DELETE /session/62b560bef9bdccb93b14a0093ace7cd1/window - {}
+COMMAND: GET /session/62b560bef9bdccb93b14a0093ace7cd1/window/handles - {}
+RESULT: {}
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/window - {"handle":"FE3584E56BC9FC1DECF51F18A989B7F1"}
+COMMAND: POST /session/62b560bef9bdccb93b14a0093ace7cd1/window - {"handle":"FE3584E56BC9FC1DECF51F18A989B7F1"}
+RESULT: {}
+RESULT: {"handle":"FE3584E56BC9FC1DECF51F18A989B7F1"}
+RESULT: {"handle":"FE3584E56BC9FC1DECF51F18A989B7F1"}
+COMMAND: DELETE /session/62b560bef9bdccb93b14a0093ace7cd1 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

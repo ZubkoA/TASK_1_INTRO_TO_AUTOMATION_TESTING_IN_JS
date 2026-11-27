@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="START page" timestamp="2026-11-27T10:29:21" time="10.922" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="START page"/>
+      <property name="capabilities" value="firefox.163_0a1.windows"/>
+      <property name="file" value="file:///D:/epam/Automating_testing_fundamental/Stage_2/task_1/src/spec/start_page.spec.js"/>
+    </properties>
+    <testcase classname="firefox.163_0a1.windows.START_page" name="should open epam web" time="2.945">
+      <system-out><![CDATA[
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.163_0a1.windows.START_page" name="should open hamburger menu" time="3.584">
+      <system-out><![CDATA[
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/url - {"url":"https://learn.epam.com/start"}
+RESULT: {"url":"https://learn.epam.com/start"}
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/element/28ce27df-a384-4622-b9fe-2c935ce0655e/click - {}
+RESULT: {}
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/element/28ce27df-a384-4622-b9fe-2c935ce0655e/click - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/element/cf6008ee-04ac-482f-948f-fe166ff327bb/name - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.163_0a1.windows.START_page" name="should navigate to Cataloge page" time="1.977">
+      <system-out><![CDATA[
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/element/d8701418-333c-46fc-8a24-66942fd08d34/click - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/title - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/title - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.163_0a1.windows.START_page" name="should navigate to Campus page" time="2.412">
+      <system-out><![CDATA[
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/element/050f24c3-0306-44a1-9df0-587f3e9a22ee/elements - {"using":"xpath","value":".//*[contains(text(), \"Campus\")]"}
+RESULT: {"using":"xpath","value":".//*[contains(text(), \"Campus\")]"}
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/actions - {"actions":[{"id":"wheel1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"88b1ddf7-7a93-45ab-bec0-72e1a21fdcc7"}}]}]}
+RESULT: {"actions":[{"id":"wheel1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"88b1ddf7-7a93-45ab-bec0-72e1a21fdcc7"}}]}]}
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/element/88b1ddf7-7a93-45ab-bec0-72e1a21fdcc7/click - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/window/handles - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/window/handles - {}
+RESULT: {}
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/window - {"handle":"0e85bba8-809f-4a86-ad66-234458cc466b"}
+RESULT: {"handle":"0e85bba8-809f-4a86-ad66-234458cc466b"}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/title - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/title - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/title - {}
+RESULT: {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/title - {}
+RESULT: {}
+COMMAND: DELETE /session/dd510233-1c83-451f-863b-2dc60432c801/window - {}
+COMMAND: GET /session/dd510233-1c83-451f-863b-2dc60432c801/window/handles - {}
+RESULT: {}
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/window - {"handle":"63ea5bf2-4260-464d-ad49-66da1e5ae833"}
+COMMAND: POST /session/dd510233-1c83-451f-863b-2dc60432c801/window - {"handle":"63ea5bf2-4260-464d-ad49-66da1e5ae833"}
+RESULT: {}
+RESULT: {"handle":"63ea5bf2-4260-464d-ad49-66da1e5ae833"}
+RESULT: {"handle":"63ea5bf2-4260-464d-ad49-66da1e5ae833"}
+COMMAND: DELETE /session/dd510233-1c83-451f-863b-2dc60432c801 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
