@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" errors="0" skipped="0">
+  <testsuite name="CAMPUS page" timestamp="2026-11-27T10:28:58" time="10.441" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="CAMPUS page"/>
+      <property name="capabilities" value="chrome.148_0_7778_179.windows"/>
+      <property name="file" value="file:///D:/epam/Automating_testing_fundamental/Stage_2/task_1/src/spec/campus_page.spec.js"/>
+    </properties>
+    <testcase classname="chrome.148_0_7778_179.windows.CAMPUS_page" name="mouse move" time="4.292">
+      <system-out><![CDATA[
+COMMAND: GET /session/7715701656b95f6f8b775a5565ea155b/element/f.50685964F3306F865D319C31A43B9A07.d.601091CD9FA01A44C30B1AB9321A0640.e.86/css/border-bottom-color - {}
+RESULT: {}
+COMMAND: GET /session/7715701656b95f6f8b775a5565ea155b/element/f.50685964F3306F865D319C31A43B9A07.d.601091CD9FA01A44C30B1AB9321A0640.e.86/css/background-color - {}
+RESULT: {}
+COMMAND: POST /session/7715701656b95f6f8b775a5565ea155b/actions - {"actions":[{"id":"pointer1","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"x":0,"y":0,"duration":100,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.50685964F3306F865D319C31A43B9A07.d.601091CD9FA01A44C30B1AB9321A0640.e.86"}}]}]}
+RESULT: {"actions":[{"id":"pointer1","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"x":0,"y":0,"duration":100,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.50685964F3306F865D319C31A43B9A07.d.601091CD9FA01A44C30B1AB9321A0640.e.86"}}]}]}
+COMMAND: DELETE /session/7715701656b95f6f8b775a5565ea155b/actions - {}
+RESULT: {}
+COMMAND: GET /session/7715701656b95f6f8b775a5565ea155b/element/f.50685964F3306F865D319C31A43B9A07.d.601091CD9FA01A44C30B1AB9321A0640.e.86/css/background-color - {}
+RESULT: {}
+COMMAND: GET /session/7715701656b95f6f8b775a5565ea155b/element/f.50685964F3306F865D319C31A43B9A07.d.601091CD9FA01A44C30B1AB9321A0640.e.86/css/border-bottom-color - {}
+RESULT: {}
+COMMAND: GET /session/7715701656b95f6f8b775a5565ea155b/element/f.50685964F3306F865D319C31A43B9A07.d.601091CD9FA01A44C30B1AB9321A0640.e.86/css/background-color - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.148_0_7778_179.windows.CAMPUS_page" name="should navigate to Trainning skills JavaScript in FOOTER" time="6.145">
+      <system-out><![CDATA[
+COMMAND: POST /session/7715701656b95f6f8b775a5565ea155b/actions - {"actions":[{"id":"wheel1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.50685964F3306F865D319C31A43B9A07.d.9FBC8F1B440A0D9BFA499B2029D373B0.e.163"}}]}]}
+RESULT: {"actions":[{"id":"wheel1","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":0,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.50685964F3306F865D319C31A43B9A07.d.9FBC8F1B440A0D9BFA499B2029D373B0.e.163"}}]}]}
+COMMAND: DELETE /session/7715701656b95f6f8b775a5565ea155b/actions - {}
+RESULT: {}
+COMMAND: POST /session/7715701656b95f6f8b775a5565ea155b/actions - {"actions":[{"id":"wheel2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":909,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.50685964F3306F865D319C31A43B9A07.d.9FBC8F1B440A0D9BFA499B2029D373B0.e.163"}}]}]}
+RESULT: {"actions":[{"id":"wheel2","type":"wheel","parameters":{},"actions":[{"type":"scroll","x":0,"y":0,"deltaX":0,"deltaY":909,"duration":0,"origin":{"element-6066-11e4-a52e-4f735466cecf":"f.50685964F3306F865D319C31A43B9A07.d.9FBC8F1B440A0D9BFA499B2029D373B0.e.163"}}]}]}
+COMMAND: DELETE /session/7715701656b95f6f8b775a5565ea155b/actions - {}
+RESULT: {}
+COMMAND: POST /session/7715701656b95f6f8b775a5565ea155b/element/f.50685964F3306F865D319C31A43B9A07.d.9FBC8F1B440A0D9BFA499B2029D373B0.e.163/click - {}
+RESULT: {}
+COMMAND: GET /session/7715701656b95f6f8b775a5565ea155b/title - {}
+RESULT: {}
+COMMAND: GET /session/7715701656b95f6f8b775a5565ea155b/title - {}
+RESULT: {}
+COMMAND: DELETE /session/7715701656b95f6f8b775a5565ea155b - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
